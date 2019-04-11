@@ -1,2 +1,4 @@
 # MetaMorphos
-Biological application about invertebrates
+
+Biology application to see anatomy of invertebrates
+
