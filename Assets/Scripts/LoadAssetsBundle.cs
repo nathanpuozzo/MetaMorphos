@@ -15,7 +15,7 @@ public class LoadAssetsBundle : MonoBehaviour
     {
         LoadAssetBundle(path);
         instantiateObjectFromBundle(assetName);
-        instantiateObjectFromBundle(assetName2);
+        //instantiateObjectFromBundle(assetName2);
     }
 
     // Update is called once per frame
