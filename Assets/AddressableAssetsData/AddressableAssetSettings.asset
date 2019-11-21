@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: AddressableAssetSettings
   m_EditorClassIdentifier: 
   m_DefaultGroup: a515862cb6cfd63468af90937b6913e9
-  m_BuildRemoteCatalog: 0
+  m_BuildRemoteCatalog: 1
+  m_UniqueBundleIds: 0
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: '[UnityEngine.AddressableAssets.Addressables.BuildPath]'
   m_RemoteCatalogLoadPath:
-    m_Id: 
+    m_Id: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}'
   m_overridePlayerVersion: 
   m_GroupAssets:
-  - {fileID: 11400000, guid: 8525c9a45be7bf448a167aa1246322e4, type: 2}
   - {fileID: 11400000, guid: 564d930c98ae8ae46947fe4a3012967f, type: 2}
+  - {fileID: 11400000, guid: f654adad67e35524ea1ede457bff5f24, type: 2}
+  - {fileID: 11400000, guid: aac97cbb3b29a314fbcfbdfd3209cbbb, type: 2}
+  - {fileID: 11400000, guid: ea738af61a4152b44a30709633ca0812, type: 2}
+  - {fileID: 11400000, guid: 06dda099d83be6b45b4440bd298a6049, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -39,6 +43,20 @@ MonoBehaviour:
         m_Value: Assets/StreamingAssets/com.unity.addressables/[BuildTarget]
       - m_Id: 4e3c71875664370408dfdbf333250b17
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: f3cacfd13ca79a44aab4aa0a8c4cb40b
+        m_Value: ServerData/[BuildTarget]
+      - m_Id: e97a910227d166c43a845039e84cc62e
+        m_Value: http://localhost/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: 0b03f22788f7eee46aecc16410dae60c
+      m_ProfileName: New Profile
+      m_Values:
+      - m_Id: 3aa6afdb5e7f26747a611c7d121b97fc
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: a3545872a573cf94b9437f91fe524cff
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]'
+      - m_Id: 4e3c71875664370408dfdbf333250b17
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}'
       - m_Id: f3cacfd13ca79a44aab4aa0a8c4cb40b
         m_Value: ServerData/[BuildTarget]
       - m_Id: e97a910227d166c43a845039e84cc62e
@@ -63,27 +81,27 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
-  m_SchemaTemplates:
-  - m_DisplayName: Packed Assets
-    m_Description: Pack asset sinto asset bundles.
-    m_SchemaTypes:
-    - m_AssemblyName: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      m_ClassName: UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema
-    - m_AssemblyName: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      m_ClassName: UnityEditor.AddressableAssets.Settings.GroupSchemas.ContentUpdateGroupSchema
+    - Sound
+    - Prefab
+    - Scene
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 044ae04996643084285d417efd3c52e6, type: 2}
+  - {fileID: 11400000, guid: 044ae04996643084285d417efd3c52e6, type: 2}
   m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
   m_ActivePlayerDataBuilderIndex: 2
-  m_ActivePlayModeDataBuilderIndex: 0
   m_DataBuilders:
   - {fileID: 11400000, guid: 3a1d02c1ccb2824428d512d58afa4fa4, type: 2}
   - {fileID: 11400000, guid: 19180038a4af5324ab86265555a1ffb2, type: 2}
   - {fileID: 11400000, guid: c9a8e69305067ed4ca2b8bcebb79afb2, type: 2}
   - {fileID: 11400000, guid: 7b8859bf1269e5f4cb08c786ed1594e8, type: 2}
-  m_ActiveProfileId: 1e3b7969560f1f645a165a18ec8a4fd1
+  m_ActiveProfileId: 0b03f22788f7eee46aecc16410dae60c
   m_HostingServicesManager:
     m_HostingServiceInfos: []
     m_Settings: {fileID: 11400000}
-    m_NextInstanceId: 0
-    m_RegisteredServiceTypeRefs: []
+    m_NextInstanceId: 1
+    m_RegisteredServiceTypeRefs:
+    - UnityEditor.AddressableAssets.HostingServices.HttpHostingService, Unity.Addressables.Editor

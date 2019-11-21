@@ -1,37 +1,47 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class LoadAssetsBundle : MonoBehaviour
 {
-
-    AssetBundle myLoadedAssetbundle;
-    public string path;
-    public string assetName;
-    public string assetName2;
-
+    [SerializeField] private AssetReference _asset;
+    private GameObject _gameObject;
+    public GameObject loadingScreen;
+    public Slider slider;
+    public Text progressText;
     // Start is called before the first frame update
     void Start()
     {
-        LoadAssetBundle(path);
-        instantiateObjectFromBundle(assetName);
-        //instantiateObjectFromBundle(assetName2);
+        StartCoroutine(LoadAssetBundle);       
     }
 
-    // Update is called once per frame
-    void LoadAssetBundle(string bundleUrl)
+    private IEnumerator LoadAssetBundle
     {
-        myLoadedAssetbundle = AssetBundle.LoadFromFile(bundleUrl);
+        get
+        {
+            loadingScreen.SetActive(true);
+            var op = Addressables.LoadAssetAsync<GameObject>(_asset);
+            while (!op.IsDone)
+            {
+                float progress = Mathf.Clamp01(op.PercentComplete / .9f);
 
-        Debug.Log(myLoadedAssetbundle == null ? "Failed to load AssetBundle" : "AssetBundle succesfully loaded");
+                slider.value = progress;
 
-    }
+                progressText.text = (progress * 100).ToString("F0") + "%";
 
-    void instantiateObjectFromBundle(string assetName)
-    {
+                yield return null;
 
-        var prefab = myLoadedAssetbundle.LoadAsset(assetName);
-        Instantiate(prefab);
-
+            }
+            loadingScreen.SetActive(false);
+            yield return op;
+            var handle = _asset.InstantiateAsync();
+            yield return handle;
+            _gameObject = handle.Result;
+            yield return null;
+        }
     }
 }
