@@ -199,9 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b5f8a78ebf7d44fb6f50a6ca52f864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: \scrollphylumscene
-  assetName: ScrollScenePrefab.prefab
-  assetName2: 
+  _asset:
+    m_AssetGUID: 
+    m_SubObjectName: 
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!1 &33882882 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6912336101423507213, guid: 7634c8c0241fe174aa760678add8546d,
@@ -359,21 +362,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 96731880086608467}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &666425243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666425242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b83ea3994b8cb488a4e354404057e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _asset:
-    m_AssetGUID: bcd012a7c1b8ea747bb4ecc70810edab
-    m_SubObjectName: 
 --- !u!224 &666425252 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5502686816610952108, guid: 954a6eae185b5df48a4fba12cec490ec,
@@ -5235,11 +5223,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HolotButtonVariant
       objectReference: {fileID: 0}
-    - target: {fileID: 2237163489885783390, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5502686816610952108, guid: 954a6eae185b5df48a4fba12cec490ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5345,16 +5328,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2204611686444049937, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: go
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2204611686444049937, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3086475370424426115, guid: 954a6eae185b5df48a4fba12cec490ec,
         type: 3}
       propertyPath: loadingScreen
@@ -5370,41 +5343,6 @@ PrefabInstance:
       propertyPath: progressText
       value: 
       objectReference: {fileID: 1633435444}
-    - target: {fileID: 3086475370424426115, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: address
-      value: HolothuroideaScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 6459672738599531400, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6459672738599531400, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 62095262175160407, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 666425243}
-    - target: {fileID: 62095262175160407, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Deactive
-      objectReference: {fileID: 0}
-    - target: {fileID: 62095262175160407, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 666425243}
-    - target: {fileID: 62095262175160407, guid: 954a6eae185b5df48a4fba12cec490ec,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartLoading
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 954a6eae185b5df48a4fba12cec490ec, type: 3}
 --- !u!1001 &96731880087513283

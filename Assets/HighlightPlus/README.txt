@@ -46,6 +46,15 @@ If you like Highlight Plus, please rate it on the Asset Store. It encourages us 
 
 
 
+Universal Rendering Pipeline
+----------------------------
+
+Customers can download a specific version of Highlight Plus designed for Universal Rendering Pipeline for free from our support forum on https://kronnect.me
+Please sign up on the forum and send a pm to "Kronnect" or email to contact@kronnect.me to get access to the private board.
+
+The Unity Asset Store currently does not allow you to select which package according to the pipeline to download so we have to offer this way so you can download it.
+
+
 Future updates
 --------------
 
@@ -65,6 +74,41 @@ https://assetstore.unity.com/publishers/15018
 
 Version history
 ---------------
+
+Current version
+- See Through: added "Occluder Mask" option. When set to a custom layer, it performs a BoxCast check to ensure only objects in the specific layers are occluding the target. Customize this behaviour using the Radius Threshold and Check Interval settings.
+- Added "Max Distance" to Highlight Trigger
+- Reduced allocations when averaging normals
+- [Fix] Fixed flickering of outer glow when used in Highest quality with thin objects
+
+Version 3.6
+- Added "Outline Independent" option. Shows full outline regardless of any other highlighted object behind.
+
+Version 3.5
+- Improved quality of Outline effect when quality level is set to Highest
+- Added "SeeThrough Border" feature 
+- Added "Blend Mode" option to Outer Glow for highest quality level
+- [Fix] Fixed issue during Prefab editor mode
+
+Version 3.4.4
+- Added option in occluder script to use raycast instead of stencil buffer to cancel see-through (useful for avoiding terrain triggering see-through effect)
+- [Fix] Fixed see-through in deferred rendering path
+
+Version 3.4.2
+- [Fix] Fixed an issue when adding the effect at runtime with outline/glow in higuest quality
+
+Version 3.4.1
+- [Fix] Fixed occluder objects removing glow effect when placed in the background
+- [Fix] Added missing SeeThrough noise option to Highlight Profile asset
+
+Version 3.4
+- Added LayerInChildren option to "Include" filter
+- Improved occluder system
+- [Fix] Prevent an error when the mesh normals count does not match the vertex count
+
+Version 3.3
+- Outline, Glow and Inner Glow "Always On Top" option expanded to "Normal", "Always On Top" or "Only When Occluded"
+- Added Noise slider to See-Through effect
 
 Version 3.2.4
 - [Fix] Fixed flickering issue when combining mesh & skinned mesh renderers

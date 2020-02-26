@@ -11,6 +11,8 @@ namespace HighlightPlus {
 		public LayerMask layerMask = -1;
 		public Camera raycastCamera;
 		public RayCastSource raycastSource = RayCastSource.MousePosition;
+        [Tooltip("Max Distance for target. 0 = infinity")]
+        public float maxDistance;
 
 		HighlightEffect baseEffect, currentEffect;
 		Transform currentObject;
@@ -48,7 +50,7 @@ namespace HighlightPlus {
 				ray = new Ray (raycastCamera.transform.position, raycastCamera.transform.forward);
 			}
 			RaycastHit hitInfo;
-			if (Physics.Raycast (ray, out hitInfo, raycastCamera.farClipPlane, layerMask)) {
+			if (Physics.Raycast(ray, out hitInfo, maxDistance > 0 ? maxDistance : raycastCamera.farClipPlane, layerMask)) {
 				// Check if the object has a Highlight Effect
 				if (hitInfo.collider != currentObject) {
 					SwitchesCollider (hitInfo.collider.transform);

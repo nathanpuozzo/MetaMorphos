@@ -4,6 +4,7 @@ Properties {
     _Color ("Color", Color) = (1,1,1) // not used; dummy property to avoid inspector warning "material has no _Color property"
     _CutOff("CutOff", Float ) = 0.5
     _Cull ("Cull Mode", Int) = 2
+	_ZTest("ZTest", Int) = 4
 }
     SubShader
     {
@@ -14,6 +15,8 @@ Properties {
         {
             ZWrite Off
             Cull [_Cull]
+			ZTest [_ZTest]
+            Offset -1, -1
 
             CGPROGRAM
             #pragma vertex vert

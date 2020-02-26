@@ -408,7 +408,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 613470776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -42.149994, z: 0}
+  m_LocalPosition: {x: 0, y: -54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1605869163}
@@ -514,6 +514,7 @@ MonoBehaviour:
   alphaCutOff: 0
   cullBackFaces: 1
   ignoreObjectVisibility: 0
+  reflectionProbes: 0
   ignore: 0
   _highlighted: 0
   fadeInDuration: 0
@@ -530,7 +531,7 @@ MonoBehaviour:
   outlineWidth: 0.5
   outlineQuality: 0
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
   glow: 1
@@ -542,7 +543,7 @@ MonoBehaviour:
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -561,7 +562,7 @@ MonoBehaviour:
   innerGlow: 0.79
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -575,6 +576,7 @@ MonoBehaviour:
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
   rmsCount: 1
 --- !u!114 &617211759
 MonoBehaviour:
@@ -713,6 +715,7 @@ MonoBehaviour:
   alphaCutOff: 0
   cullBackFaces: 1
   ignoreObjectVisibility: 0
+  reflectionProbes: 0
   ignore: 0
   _highlighted: 0
   fadeInDuration: 0
@@ -729,7 +732,7 @@ MonoBehaviour:
   outlineWidth: 0.4
   outlineQuality: 0
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
   glow: 1.78
@@ -741,7 +744,7 @@ MonoBehaviour:
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 0.2
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -760,7 +763,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 1
   targetFXTexture: {fileID: 2800000, guid: 1de3c566a6c8c405b9f6f453137273ec, type: 3}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -774,6 +777,7 @@ MonoBehaviour:
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
   rmsCount: 1
 --- !u!114 &656694101
 MonoBehaviour:
@@ -854,8 +858,6 @@ GameObject:
   m_Component:
   - component: {fileID: 965526244}
   - component: {fileID: 965526243}
-  - component: {fileID: 965526242}
-  - component: {fileID: 965526241}
   - component: {fileID: 965526240}
   m_Layer: 0
   m_Name: Camera
@@ -868,22 +870,6 @@ GameObject:
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 8100000, guid: 97b34cadc45c6d94abd78dfc533fc3b2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 965526239}
-  m_Enabled: 1
---- !u!124 &965526241
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 12400000, guid: 97b34cadc45c6d94abd78dfc533fc3b2,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 965526239}
-  m_Enabled: 1
---- !u!92 &965526242
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9200000, guid: 97b34cadc45c6d94abd78dfc533fc3b2,
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 965526239}
@@ -1262,6 +1248,7 @@ MonoBehaviour:
   alphaCutOff: 0
   cullBackFaces: 1
   ignoreObjectVisibility: 0
+  reflectionProbes: 0
   ignore: 0
   _highlighted: 0
   fadeInDuration: 1
@@ -1278,7 +1265,7 @@ MonoBehaviour:
   outlineWidth: 0.4
   outlineQuality: 0
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
   glow: 1.32
@@ -1290,7 +1277,7 @@ MonoBehaviour:
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -1309,7 +1296,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 2800000, guid: 1de3c566a6c8c405b9f6f453137273ec, type: 3}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1323,6 +1310,7 @@ MonoBehaviour:
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
   rmsCount: 1
 --- !u!114 &1392572693
 MonoBehaviour:
@@ -1596,7 +1584,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605869162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -337.2, z: 0}
+  m_LocalPosition: {x: 0, y: -432, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 613470777}
@@ -1754,7 +1742,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819248541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 867.5, y: 421.5, z: 0}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1605869163}

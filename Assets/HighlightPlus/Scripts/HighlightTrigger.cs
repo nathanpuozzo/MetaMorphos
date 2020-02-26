@@ -25,21 +25,27 @@ namespace HighlightPlus {
 		public TriggerMode triggerMode = TriggerMode.ColliderEventsOnlyOnThisObject;
 		public Camera raycastCamera;
 		public RayCastSource raycastSource = RayCastSource.MousePosition;
+        public float maxDistance;
 
 		const int MAX_RAYCAST_HITS = 100;
 
-		[NonSerialized]
+        public Camera camera;
+
+        [NonSerialized]
 		public Collider[] colliders;
 		Collider currentCollider;
 		static RaycastHit[] hits;
 
-		void OnEnable () {
+        int clickCount = 0;
+
+        void OnEnable () {
 			Init ();
 		}
 
 
 		void Start () {
-			if (triggerMode == TriggerMode.RaycastOnThisObjectAndChildren) {
+            camera = GameObject.Find("UICamera").GetComponent<Camera>();
+            if (triggerMode == TriggerMode.RaycastOnThisObjectAndChildren) {
 				if (raycastCamera == null) {
 					raycastCamera = HighlightManager.GetCamera ();
 					if (raycastCamera == null) {
@@ -70,7 +76,12 @@ namespace HighlightPlus {
 					} else {
 						ray = new Ray (raycastCamera.transform.position, raycastCamera.transform.forward);
 					}
-					int hitCount = Physics.RaycastNonAlloc (ray, hits);
+                    int hitCount;
+                    if (maxDistance > 0) {
+                        hitCount = Physics.RaycastNonAlloc(ray, hits, maxDistance);
+                    } else {
+                        hitCount = Physics.RaycastNonAlloc(ray, hits);
+                    }
 					bool hit = false;
 					for (int k = 0; k < hitCount; k++) {
 						Collider theCollider = hits [k].collider;
@@ -105,11 +116,28 @@ namespace HighlightPlus {
 
 
 		void OnMouseDown () {
-            if (isActiveAndEnabled && triggerMode == TriggerMode.ColliderEventsOnlyOnThisObject) {
-				Highlight (true);
-			}
+            if (isActiveAndEnabled && triggerMode == TriggerMode.ColliderEventsOnlyOnThisObject)
+            {
+                Highlight(true);
+                clickCount++;
+
+                if (clickCount == 2)
+                {
+                    Highlight(false);
+                    clickCount = 0;
+                }
+            }
 		}
 
+        void Update()
+        {
+            if (camera.fieldOfView < 50.0f)
+            {
+                Highlight(false);
+                clickCount = 0;
+            }
+        }
+        /*
 		void OnMouseEnter () {
             if (isActiveAndEnabled && triggerMode == TriggerMode.ColliderEventsOnlyOnThisObject) {
 				Highlight (true);
@@ -121,8 +149,8 @@ namespace HighlightPlus {
 				Highlight (false);
 			}
 		}
-
-		void Highlight (bool state) {
+        */
+        void Highlight (bool state) {
 			HighlightEffect hb = transform.GetComponent<HighlightEffect> ();
 			if (hb == null && state) {
 				hb = gameObject.AddComponent<HighlightEffect> ();

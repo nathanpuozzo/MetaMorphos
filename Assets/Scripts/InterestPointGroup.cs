@@ -96,6 +96,7 @@ public class InterestPoint
         lineRenderer.SetPosition(0, Vector3.zero);
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
+        
     }
 
     public InterestPoint(InterestPointConstructor psc)

@@ -130,8 +130,8 @@ SubShader
 					//UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i); // Commandbuffers do not support Single Pass Instanced so we have to disable this
 					fixed4 outline = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv);
 					fixed4 color = _Color;
-					color = saturate(color);
 					color.a *= outline.a;
+                    color = saturate(color);
 					return color;
 				}
 				ENDCG

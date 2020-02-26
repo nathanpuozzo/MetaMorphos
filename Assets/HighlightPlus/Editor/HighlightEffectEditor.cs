@@ -12,10 +12,11 @@ namespace HighlightPlus {
         SerializedProperty profile, profileSync, ignoreObjectVisibility, reflectionProbes, ignore, previewInEditor, effectGroup, effectGroupLayer, alphaCutOff, cullBackFaces;
         SerializedProperty highlighted, fadeInDuration, fadeOutDuration, flipY, constantWidth;
         SerializedProperty overlay, overlayColor, overlayAnimationSpeed, overlayMinIntensity, overlayBlending;
-        SerializedProperty outline, outlineColor, outlineWidth, outlineQuality, outlineDownsampling, outlineAlwaysOnTop, outlineOptimalBlit, outlineBlitDebug;
-        SerializedProperty glow, glowWidth, glowQuality, glowDownsampling, glowHQColor, glowDithering, glowMagicNumber1, glowMagicNumber2, glowAnimationSpeed, glowPasses, glowAlwaysOnTop, glowOptimalBlit, glowBlitDebug;
-        SerializedProperty innerGlow, innerGlowWidth, innerGlowColor, innerGlowAlwaysOnTop;
-        SerializedProperty seeThrough, seeThroughIntensity, seeThroughTintAlpha, seeThroughTintColor;
+        SerializedProperty outline, outlineColor, outlineWidth, outlineQuality, outlineDownsampling, outlineVisibility, outlineOptimalBlit, outlineBlitDebug, outlineIndependent;
+        SerializedProperty glow, glowWidth, glowQuality, glowBlendMode, glowDownsampling, glowHQColor, glowDithering, glowMagicNumber1, glowMagicNumber2, glowAnimationSpeed, glowPasses, glowVisibility, glowOptimalBlit, glowBlitDebug;
+        SerializedProperty innerGlow, innerGlowWidth, innerGlowColor, innerGlowVisibility;
+        SerializedProperty seeThrough, seeThroughOccluderMask, seeThroughOccluderThreshold, seeThroughOccluderCheckInterval;
+        SerializedProperty seeThroughIntensity, seeThroughTintAlpha, seeThroughTintColor, seeThroughNoise, seeThroughBorder, seeThroughBorderWidth, seeThroughBorderColor;
         SerializedProperty targetFX, targetFXTexture, targetFXColor, targetFXCenter, targetFXRotationSpeed, targetFXInitialScale, targetFXEndScale, targetFXTransitionDuration, targetFXStayDuration;
         HighlightEffect thisEffect;
         bool profileChanged, enableProfileApply;
@@ -24,7 +25,7 @@ namespace HighlightPlus {
             profile = serializedObject.FindProperty("profile");
             profileSync = serializedObject.FindProperty("profileSync");
             ignoreObjectVisibility = serializedObject.FindProperty("ignoreObjectVisibility");
-			reflectionProbes = serializedObject.FindProperty ("reflectionProbes");
+            reflectionProbes = serializedObject.FindProperty("reflectionProbes");
             ignore = serializedObject.FindProperty("ignore");
             previewInEditor = serializedObject.FindProperty("previewInEditor");
             effectGroup = serializedObject.FindProperty("effectGroup");
@@ -45,9 +46,10 @@ namespace HighlightPlus {
             outlineColor = serializedObject.FindProperty("outlineColor");
             outlineWidth = serializedObject.FindProperty("outlineWidth");
             outlineQuality = serializedObject.FindProperty("outlineQuality");
-            outlineAlwaysOnTop = serializedObject.FindProperty("outlineAlwaysOnTop");
+            outlineVisibility = serializedObject.FindProperty("outlineVisibility");
             outlineOptimalBlit = serializedObject.FindProperty("outlineOptimalBlit");
             outlineBlitDebug = serializedObject.FindProperty("outlineBlitDebug");
+            outlineIndependent = serializedObject.FindProperty("outlineIndependent");
             outlineDownsampling = serializedObject.FindProperty("outlineDownsampling");
             glow = serializedObject.FindProperty("glow");
             glowWidth = serializedObject.FindProperty("glowWidth");
@@ -55,22 +57,30 @@ namespace HighlightPlus {
             glowHQColor = serializedObject.FindProperty("glowHQColor");
             glowAnimationSpeed = serializedObject.FindProperty("glowAnimationSpeed");
             glowDithering = serializedObject.FindProperty("glowDithering");
+            glowBlendMode = serializedObject.FindProperty("glowBlendMode");
             glowMagicNumber1 = serializedObject.FindProperty("glowMagicNumber1");
             glowMagicNumber2 = serializedObject.FindProperty("glowMagicNumber2");
             glowAnimationSpeed = serializedObject.FindProperty("glowAnimationSpeed");
             glowPasses = serializedObject.FindProperty("glowPasses");
-            glowAlwaysOnTop = serializedObject.FindProperty("glowAlwaysOnTop");
+            glowVisibility = serializedObject.FindProperty("glowVisibility");
             glowOptimalBlit = serializedObject.FindProperty("glowOptimalBlit");
             glowBlitDebug = serializedObject.FindProperty("glowBlitDebug");
             glowDownsampling = serializedObject.FindProperty("glowDownsampling");
             innerGlow = serializedObject.FindProperty("innerGlow");
             innerGlowColor = serializedObject.FindProperty("innerGlowColor");
             innerGlowWidth = serializedObject.FindProperty("innerGlowWidth");
-            innerGlowAlwaysOnTop = serializedObject.FindProperty("innerGlowAlwaysOnTop");
+            innerGlowVisibility = serializedObject.FindProperty("innerGlowVisibility");
             seeThrough = serializedObject.FindProperty("seeThrough");
+            seeThroughOccluderMask = serializedObject.FindProperty("seeThroughOccluderMask");
+            seeThroughOccluderThreshold = serializedObject.FindProperty("seeThroughOccluderThreshold");
+            seeThroughOccluderCheckInterval = serializedObject.FindProperty("seeThroughOccluderCheckInterval");
             seeThroughIntensity = serializedObject.FindProperty("seeThroughIntensity");
             seeThroughTintAlpha = serializedObject.FindProperty("seeThroughTintAlpha");
             seeThroughTintColor = serializedObject.FindProperty("seeThroughTintColor");
+            seeThroughNoise = serializedObject.FindProperty("seeThroughNoise");
+            seeThroughBorder = serializedObject.FindProperty("seeThroughBorder");
+            seeThroughBorderWidth = serializedObject.FindProperty("seeThroughBorderWidth");
+            seeThroughBorderColor = serializedObject.FindProperty("seeThroughBorderColor");
             targetFX = serializedObject.FindProperty("targetFX");
             targetFXTexture = serializedObject.FindProperty("targetFXTexture");
             targetFXRotationSpeed = serializedObject.FindProperty("targetFXRotationSpeed");
@@ -147,7 +157,7 @@ namespace HighlightPlus {
                 EditorGUILayout.HelpBox("This GameObject or one of its children is marked as static. If highlight is not visible, add a MeshCollider to them.", MessageType.Warning);
             }
 
-			EditorGUILayout.PropertyField(reflectionProbes);
+            EditorGUILayout.PropertyField(reflectionProbes);
 
             EditorGUILayout.Separator();
             EditorGUILayout.BeginHorizontal();
@@ -171,7 +181,7 @@ namespace HighlightPlus {
             }
             if (!ignore.boolValue) {
                 EditorGUILayout.PropertyField(effectGroup, new GUIContent("Include", "Additional objects to highlight. Pro tip: when highlighting multiple objects at the same time include them in the same layer or under the same parent."));
-                if (effectGroup.intValue == (int)TargetOptions.Layer) {
+                if (effectGroup.intValue == (int)TargetOptions.LayerInScene || effectGroup.intValue == (int)TargetOptions.LayerInChildren) {
                     EditorGUI.indentLevel++;
                     EditorGUILayout.PropertyField(effectGroupLayer, new GUIContent("Layer"));
                     EditorGUI.indentLevel--;
@@ -194,7 +204,14 @@ namespace HighlightPlus {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(outlineWidth, new GUIContent("Width"));
                 EditorGUILayout.PropertyField(outlineColor, new GUIContent("Color"));
+                EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PropertyField(outlineQuality, new GUIContent("Quality", "Default and High use a mesh displacement technique. Highest quality can provide best look and also performance depending on the complexity of mesh."));
+                if (outlineQuality.intValue == (int)QualityLevel.Highest) {
+                    GUILayout.Label("(Screen-Space Effect)");
+                } else {
+                    GUILayout.Label("(Mesh-based Effect)");
+                }
+                EditorGUILayout.EndHorizontal();
                 CheckVRSupport(outlineQuality.intValue);
                 if (outlineQuality.intValue == (int)QualityLevel.Highest) {
                     EditorGUILayout.PropertyField(outlineDownsampling, new GUIContent("Downsampling"));
@@ -211,9 +228,18 @@ namespace HighlightPlus {
                     }
                 }
 
-                    GUI.enabled = outlineQuality.intValue != (int)QualityLevel.Highest || CheckForwardMSAA();
-                    EditorGUILayout.PropertyField(outlineAlwaysOnTop, new GUIContent("Always On Top", "Shows outline on top of any occluding objects."));
+                GUI.enabled = outlineQuality.intValue != (int)QualityLevel.Highest || CheckForwardMSAA();
+                if (outlineQuality.intValue == (int)QualityLevel.Highest && glowQuality.intValue == (int)QualityLevel.Highest) {
+                    EditorGUILayout.PropertyField(glowVisibility, new GUIContent("Visibility"));
+                } else {
+                    EditorGUILayout.PropertyField(outlineVisibility, new GUIContent("Visibility"));
+                }
+                if (outlineQuality.intValue != (int)QualityLevel.Highest) {
+                    GUI.enabled = outlineVisibility.intValue != (int)Visibility.AlwaysOnTop;
+                    EditorGUILayout.PropertyField(outlineIndependent, new GUIContent("Independent", "Shows full outline regardless of other highlighted objects."));
                     GUI.enabled = true;
+                }
+                GUI.enabled = true;
 
                 EditorGUI.indentLevel--;
                 EditorGUILayout.EndVertical();
@@ -222,7 +248,14 @@ namespace HighlightPlus {
                 DrawSectionField(glow, "Outer Glow", glow.floatValue > 0);
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(glowWidth, new GUIContent("Width"));
+                EditorGUILayout.BeginHorizontal();
                 EditorGUILayout.PropertyField(glowQuality, new GUIContent("Quality", "Default and High use a mesh displacement technique. Highest quality can provide best look and also performance depending on the complexity of mesh."));
+                if (glowQuality.intValue == (int)QualityLevel.Highest) {
+                    GUILayout.Label("(Screen-Space Effect)");
+                } else {
+                    GUILayout.Label("(Mesh-based Effect)");
+                }
+                EditorGUILayout.EndHorizontal();
                 CheckVRSupport(glowQuality.intValue);
                 if (glowQuality.intValue == (int)QualityLevel.Highest) {
                     EditorGUILayout.PropertyField(glowDownsampling, new GUIContent("Downsampling"));
@@ -230,6 +263,7 @@ namespace HighlightPlus {
                 }
                 EditorGUILayout.PropertyField(glowAnimationSpeed, new GUIContent("Animation Speed"));
                 if (glowQuality.intValue == (int)QualityLevel.Highest) {
+                    EditorGUILayout.PropertyField(glowBlendMode, new GUIContent("Blend Mode"));
                     EditorGUILayout.PropertyField(glowOptimalBlit, new GUIContent("Optimal Blit", "Blits result over a section of the screen instead of rendering to the full screen buffer."));
                     if (glowOptimalBlit.boolValue) {
                         EditorGUI.indentLevel++;
@@ -239,13 +273,12 @@ namespace HighlightPlus {
                         }
                         EditorGUI.indentLevel--;
                     }
-                        GUI.enabled = glowQuality.intValue != (int)QualityLevel.Highest || CheckForwardMSAA();
-                        EditorGUILayout.PropertyField(glowAlwaysOnTop, new GUIContent("Always On Top", "Shows outer glow on top of any occluding objects."));
-                        GUI.enabled = true;
-                    }
-                else {
                     GUI.enabled = glowQuality.intValue != (int)QualityLevel.Highest || CheckForwardMSAA();
-                    EditorGUILayout.PropertyField(glowAlwaysOnTop, new GUIContent("Always On Top", "Shows outer glow on top of any occluding objects."));
+                    EditorGUILayout.PropertyField(glowVisibility, new GUIContent("Visibility"));
+                    GUI.enabled = true;
+                } else {
+                    GUI.enabled = glowQuality.intValue != (int)QualityLevel.Highest || CheckForwardMSAA();
+                    EditorGUILayout.PropertyField(glowVisibility, new GUIContent("Visibility"));
                     GUI.enabled = true;
                     EditorGUILayout.PropertyField(glowDithering, new GUIContent("Dithering"));
                     if (glowDithering.boolValue) {
@@ -264,7 +297,7 @@ namespace HighlightPlus {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(innerGlowColor, new GUIContent("Color"));
                 EditorGUILayout.PropertyField(innerGlowWidth, new GUIContent("Width"));
-                EditorGUILayout.PropertyField(innerGlowAlwaysOnTop, new GUIContent("Always On Top", "Shows inner glow on top of any occluding objects."));
+                EditorGUILayout.PropertyField(innerGlowVisibility, new GUIContent("Visibility"));
                 EditorGUI.indentLevel--;
                 EditorGUILayout.EndVertical();
 
@@ -305,9 +338,23 @@ namespace HighlightPlus {
                 EditorGUILayout.HelpBox("This option is not valid in Manager.\nTo make an object always visible add a Highlight Effect component to the gameobject and enable this option on the component.", MessageType.Error);
             }
             EditorGUI.indentLevel++;
+            EditorGUILayout.PropertyField(seeThroughOccluderMask, new GUIContent("Occluder Layer"));
+            if (seeThroughOccluderMask.intValue > 0) {
+                EditorGUI.indentLevel++;
+                EditorGUILayout.PropertyField(seeThroughOccluderThreshold, new GUIContent("Radius Threshold", "Multiplier to the object bounds. Making the bounds smaller prevents false occlusion tests."));
+                EditorGUILayout.PropertyField(seeThroughOccluderCheckInterval, new GUIContent("Check Interval", "Interval in seconds between occlusion tests."));
+                EditorGUI.indentLevel--;
+            }
             EditorGUILayout.PropertyField(seeThroughIntensity, new GUIContent("Intensity"));
-            EditorGUILayout.PropertyField(seeThroughTintAlpha, new GUIContent("Alpha"));
             EditorGUILayout.PropertyField(seeThroughTintColor, new GUIContent("Color"));
+            EditorGUILayout.PropertyField(seeThroughTintAlpha, new GUIContent("Color Blend"));
+            EditorGUILayout.PropertyField(seeThroughNoise, new GUIContent("Noise"));
+            EditorGUILayout.PropertyField(seeThroughBorder, new GUIContent("Border When Hidden" + ((seeThroughBorder.floatValue > 0) ? " •" : "")));
+            EditorGUI.indentLevel++;
+            EditorGUILayout.PropertyField(seeThroughBorderWidth, new GUIContent("Width"));
+            EditorGUILayout.PropertyField(seeThroughBorderColor, new GUIContent("Color"));
+            EditorGUI.indentLevel--;
+
             EditorGUI.indentLevel--;
             EditorGUILayout.EndVertical();
 
@@ -327,7 +374,13 @@ namespace HighlightPlus {
                 }
             }
             if (thisEffect != null && thisEffect.previewInEditor) {
+#if UNITY_2018_3_OR_NEWER
+                if (UnityEditor.Experimental.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage()==null) {
+                    EditorUtility.SetDirty(thisEffect);
+                }
+#else
                 EditorUtility.SetDirty(thisEffect);
+#endif
             }
         }
 
@@ -346,7 +399,7 @@ namespace HighlightPlus {
         bool CheckForwardMSAA() {
             if (QualitySettings.antiAliasing > 1) {
                 if (Camera.main != null && Camera.main.allowMSAA) {
-                    EditorGUILayout.HelpBox("Effect will be shown always on top due to MSAA. To enable depth clipping disable MSAA first.", MessageType.Info);
+                    EditorGUILayout.HelpBox("Effect will be shown always on top due to MSAA. To enable depth clipping disable MSAA first or choose a different quality level.", MessageType.Info);
                     return false;
                 }
             }

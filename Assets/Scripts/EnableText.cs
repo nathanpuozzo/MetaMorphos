@@ -22,12 +22,13 @@ public class EnableText : MonoBehaviour
     InterestPoint moveText;
     Button bilbo;
     int clickCount = 0;
-
+    public Camera camera;
+    float m_fieldOfView = 60.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        camera = GameObject.Find("UICamera").GetComponent<Camera>();
         cloneLabel = GameObject.Find(gameObject.name);
         text = cloneLabel.GetComponent<Text>();
         bilbo = cloneLabel.AddComponent<Button>();
@@ -39,8 +40,8 @@ public class EnableText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
+
+
         if (GetComponent<LineRenderer>() != null)
         {
             line = GetComponent<LineRenderer>();
@@ -50,7 +51,15 @@ public class EnableText : MonoBehaviour
                 line.enabled = false;
             }
         }
+
+        if (camera.fieldOfView < 50.0f)
+        {
+            Debug.Log("I'm here");
+            DisableTxt();
+            clickCount = 0;
+        }
     }
+    /*
     private void OnMouseEnter()
     {
 
@@ -64,28 +73,30 @@ public class EnableText : MonoBehaviour
             
         }
     }
-
+    */
     private void OnMouseDown()
     {
-        txtStay = true;
-        text.enabled = true;
-        lineCond = true;
-        
-        if (GetComponent<LineRenderer>() != null)
-        {
-            if (lineCond == true) { line.enabled = true; }
+   
+            txtStay = true;
+            text.enabled = true;
+            lineCond = true;
+
+            if (GetComponent<LineRenderer>() != null)
+            {
+                if (lineCond == true) { line.enabled = true; }
 
 
-        }
+            }
             clickCount++;
             Debug.Log(clickCount);
 
-        if (clickCount == 2)
-        {
-            Debug.Log(clickCount);
-            clickCount=0;
-            DisableTxt();
-        }
+            if (clickCount == 2)
+            {
+                Debug.Log(clickCount);
+                clickCount = 0;
+                DisableTxt();
+            }
+        
         
 
     }
@@ -102,7 +113,7 @@ public class EnableText : MonoBehaviour
 
         }
     }
-
+    /*
     private void OnMouseExit()
     {
         if (txtStay == false)
@@ -116,6 +127,6 @@ public class EnableText : MonoBehaviour
             }
         }
     }
-
+    */
    
 }

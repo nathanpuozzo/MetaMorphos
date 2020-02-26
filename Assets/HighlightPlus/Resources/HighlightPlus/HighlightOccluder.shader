@@ -13,12 +13,11 @@ Properties {
 			Stencil {
                 Ref 2
                 Comp always
-                Pass replace
-            }
+                Pass DecrWrap
+        }
             ColorMask 0
             ZWrite Off
-            Cull Off
-            ZTest Always
+            Offset -1, -1
 
             CGPROGRAM
             #pragma vertex vert

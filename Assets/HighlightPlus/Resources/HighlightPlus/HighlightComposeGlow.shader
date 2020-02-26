@@ -2,15 +2,18 @@ Shader "HighlightPlus/Geometry/ComposeGlow" {
 Properties {
     _MainTex ("Texture", 2D) = "black" {}
     _Color ("Color", Color) = (1,1,1) // not used; dummy property to avoid inspector warning "material has no _Color property"
-    _Cull ("Cull Mode", Int) = 2
-    _ZTest ("ZTest Mode", Int) = 0
-	_Flip("Flip", Vector) = (0, 1, 0)
+    [HideInInspector] _Cull ("Cull Mode", Int) = 2
+    [HideInInspector] _ZTest ("ZTest Mode", Int) = 0
+	[HideInInspector] _Flip("Flip", Vector) = (0, 1, 0)
 	_Debug("Debug Color", Color) = (0,0,0,0)
-	_StereoRendering("Stereo Rendering Correction", Float) = 1
+	[HideInInspector] _StereoRendering("Stereo Rendering Correction", Float) = 1
+    [HideInInspector] _SrcBlend ("Blend Src", Int) = 1
+    [HideInInspector] _DstBlend ("Blend Dst", Int) = 1
 }
     SubShader
     {
         Tags { "Queue"="Transparent+102" "RenderType"="Transparent" }
+        Blend [_SrcBlend] [_DstBlend]
 
         // Compose effect on camera target
         Pass
@@ -18,7 +21,6 @@ Properties {
             ZWrite Off
 			ZTest Always //[_ZTest]
 			Cull Off //[_Cull]
-            Blend One One
         	Stencil {
                 Ref 2
                 Comp NotEqual
@@ -67,6 +69,7 @@ Properties {
             	fixed4 color = _Color;
             	color *= glow.a;
 				color += _Debug;
+                color.a = saturate(color.a);
             	return color;
             }
             ENDCG
@@ -78,7 +81,6 @@ Properties {
 					ZWrite Off
 					ZTest Always //[_ZTest]
 					Cull Off //[_Cull]
-					Blend One One
 
 					Stencil {
 						Ref 2
@@ -133,6 +135,7 @@ Properties {
 						fixed4 glow = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv);
 						fixed4 color = _Color;
 						color *= glow.a;
+                        color.a = saturate(color.a);
 						return color;
 					}
 					ENDCG

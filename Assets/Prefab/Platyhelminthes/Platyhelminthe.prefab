@@ -1,5 +1,96 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &567153307391071120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4087993586325480398}
+  - component: {fileID: 421176749896758845}
+  m_Layer: 0
+  m_Name: top light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4087993586325480398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567153307391071120}
+  m_LocalRotation: {x: -0.00058001425, y: 0.7071066, z: 0.7071066, w: 0.00058001425}
+  m_LocalPosition: {x: -0.24258614, y: -16.4, z: -50.859985}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2693226927926329368}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 179.906}
+--- !u!108 &421176749896758845
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567153307391071120}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 0
+  m_Color: {r: 0.98741907, g: 1, b: 0.8443396, a: 1}
+  m_Intensity: 6.46
+  m_Range: 43.25
+  m_SpotAngle: 133.8
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &8134446530748441162
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +395,116 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765995986848053964, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3491449092840156962, guid: adf8c03caa931cd48a441504cf094fba,
         type: 3}
       propertyPath: raycastCamera
@@ -314,11 +515,231 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7311515098764857721, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4630673657765887152, guid: adf8c03caa931cd48a441504cf094fba,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290269428980862616, guid: adf8c03caa931cd48a441504cf094fba,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf8c03caa931cd48a441504cf094fba, type: 3}
 --- !u!4 &3923672487545286089 stripped
@@ -410,11 +831,451 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161104216278041759, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3035599526763385535, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3885566516665006708, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796707582125551888, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527896357458119597, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6945545127300097285, guid: 0d39b9b12f070414e9cbfcf247bb5f04,
         type: 3}
       propertyPath: raycastCamera
@@ -556,11 +1417,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1111100945661767937, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: m_Text
-      value: "Syst\xE8me reproducteur femelle"
-      objectReference: {fileID: 0}
     - target: {fileID: 7124811714335970300, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: m_Camera
@@ -571,30 +1427,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5585592052545393929}
-    - target: {fileID: 6534399462680252942, guid: 2fe24352d3f697243a12e319f3d15d4f,
+    - target: {fileID: 7687849012009872841, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Capture
-      objectReference: {fileID: 0}
-    - target: {fileID: 3184978823066350754, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.00012207031
+      propertyPath: m_AnchoredPosition.y
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 9193147920595405172, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -60
       objectReference: {fileID: 0}
-    - target: {fileID: 7687849012009872841, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -160
-      objectReference: {fileID: 0}
     - target: {fileID: 4170592391672648181, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -260
+      objectReference: {fileID: 0}
+    - target: {fileID: 3523132093351857102, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: m_Size
+      value: 0.9999999
       objectReference: {fileID: 0}
     - target: {fileID: 2513413319999597668, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
@@ -613,19 +1464,9 @@ PrefabInstance:
       objectReference: {fileID: 332770628681235006}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8903170414507919772}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Target
@@ -633,19 +1474,9 @@ PrefabInstance:
       objectReference: {fileID: 3455015301290323621}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 4769211227686112065}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[4].m_Target
@@ -653,29 +1484,14 @@ PrefabInstance:
       objectReference: {fileID: 3261735501951580564}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
       objectReference: {fileID: 6517494064138471277}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
       objectReference: {fileID: 2522020369560031407}
-    - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[6].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 2780783506598813697, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[7].m_Target
@@ -691,46 +1507,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 332770628681235006}
-    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2522020369560031407}
-    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5046183526080255326, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 332770628681235006}
-    - target: {fileID: 5046183526080255326, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 5046183526080255326, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -743,10 +1524,25 @@ PrefabInstance:
       objectReference: {fileID: 6517494064138471277}
     - target: {fileID: 5046183526080255326, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5046183526080255326, guid: 2fe24352d3f697243a12e319f3d15d4f,
+    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 332770628681235006}
+    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2522020369560031407}
+    - target: {fileID: 6255941590697234543, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 0
@@ -758,19 +1554,9 @@ PrefabInstance:
       objectReference: {fileID: 332770628681235006}
     - target: {fileID: 4039454668765467592, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 4039454668765467592, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 8903170414507919772}
-    - target: {fileID: 4039454668765467592, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 3652249653770836675, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -778,8 +1564,8 @@ PrefabInstance:
       objectReference: {fileID: 332770628681235006}
     - target: {fileID: 3652249653770836675, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3652249653770836675, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
@@ -788,46 +1574,6 @@ PrefabInstance:
       objectReference: {fileID: 3455015301290323621}
     - target: {fileID: 3652249653770836675, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3652249653770836675, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3652249653770836675, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 332770628681235006}
-    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 3261735501951580564}
-    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 0
       objectReference: {fileID: 0}
@@ -836,11 +1582,6 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 332770628681235006}
-    - target: {fileID: 396813626308963411, guid: 2fe24352d3f697243a12e319f3d15d4f,
-        type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
     - target: {fileID: 396813626308963411, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -853,10 +1594,25 @@ PrefabInstance:
       objectReference: {fileID: 4769211227686112065}
     - target: {fileID: 396813626308963411, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
-      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 396813626308963411, guid: 2fe24352d3f697243a12e319f3d15d4f,
+    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 332770628681235006}
+    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3261735501951580564}
+    - target: {fileID: 1199616965903403246, guid: 2fe24352d3f697243a12e319f3d15d4f,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 0
@@ -865,6 +1621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: "Syst\xE8me reproducteur m\xE2le"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111100945661767937, guid: 2fe24352d3f697243a12e319f3d15d4f,
+        type: 3}
+      propertyPath: m_Text
+      value: "Syst\xE8me reproducteur femelle"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fe24352d3f697243a12e319f3d15d4f, type: 3}
@@ -952,11 +1713,561 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431287213705638783, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724074238151893886, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824550915300812187, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3414541401953923988, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2380892369182291629, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855039441753185983, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 846040201559906749, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
         type: 3}
       propertyPath: raycastCamera
@@ -976,6 +2287,116 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7789526550730043616, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5823293035485537808, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
         type: 3}
       propertyPath: raycastCamera
@@ -983,15 +2404,15 @@ PrefabInstance:
       objectReference: {fileID: 4993793318797058919}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5939c1b545df9e4ca3841fe0ce11c8c, type: 3}
---- !u!1 &4769211227686112065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8775044694297141854, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 4316872864529180959}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8648501255313795605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4894633165856391946, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4316872864529180959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4769211227686112065 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775044694297141854, guid: a5939c1b545df9e4ca3841fe0ce11c8c,
     type: 3}
   m_PrefabInstance: {fileID: 4316872864529180959}
   m_PrefabAsset: {fileID: 0}
@@ -1186,16 +2607,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7011167529998484022, guid: 6651a9cc4dde85d4b993cb16f4bf4716,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7011167529998484022, guid: 6651a9cc4dde85d4b993cb16f4bf4716,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6651a9cc4dde85d4b993cb16f4bf4716, type: 3}
 --- !u!1 &6517494064138471277 stripped
@@ -1221,11 +2632,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Externe
-      objectReference: {fileID: 0}
-    - target: {fileID: 6471138353934720845, guid: 97df539511e8572439e01d09b4ff1dc4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6471138353934720834, guid: 97df539511e8572439e01d09b4ff1dc4,
         type: 3}
@@ -1282,11 +2688,231 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869042969552516531, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5869042969552516540, guid: 97df539511e8572439e01d09b4ff1dc4,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5867049207243449179, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5867049207243449156, guid: 97df539511e8572439e01d09b4ff1dc4,
         type: 3}
       propertyPath: raycastCamera
@@ -1297,16 +2923,456 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969178685046225633, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9085029076320775642, guid: 97df539511e8572439e01d09b4ff1dc4,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085029076320775641, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4570577079435100709, guid: 97df539511e8572439e01d09b4ff1dc4,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570577079435100708, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4113397154907172787, guid: 97df539511e8572439e01d09b4ff1dc4,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4113397154907172796, guid: 97df539511e8572439e01d09b4ff1dc4,
         type: 3}
       propertyPath: raycastCamera
@@ -1392,6 +3458,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007914654933710, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007914654933710, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_Range
+      value: 59.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007914654933710, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 122.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2991492
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.10245494
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.23767671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91843486
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 36.741
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.2900002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007915392305451, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 27.925001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007914654933709, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976007914654933709, guid: 5cc7f96e52e26f74bb028c540d7b66cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -21.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc7f96e52e26f74bb028c540d7b66cf, type: 3}
@@ -1484,11 +3610,451 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928101996625971560, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6533338846449764582, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5567797390679777164, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3156929923695837577, guid: 93e160727df757e44b904a1390b5399c,
         type: 3}
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 4993793318797058919}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: alphaCutOff
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: overlayMinIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outline
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: outlineWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glow
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowWidth
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.g
+      value: 0.9945061
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowHQColor.b
+      value: 0.9481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: glowAnimationSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThrough
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughOccluderThreshold
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughIntensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083257129125556220, guid: 93e160727df757e44b904a1390b5399c,
+        type: 3}
+      propertyPath: seeThroughTintColor.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1736086688430288833, guid: 93e160727df757e44b904a1390b5399c,
         type: 3}
       propertyPath: raycastCamera

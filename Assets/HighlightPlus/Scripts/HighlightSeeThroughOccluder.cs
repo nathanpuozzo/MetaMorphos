@@ -5,20 +5,68 @@ using UnityEngine;
 
 namespace HighlightPlus {
 
-	[RequireComponent (typeof(HighlightEffect))]
+    public struct MeshData {
+        public Renderer renderer;
+        public int subMeshCount;
+    }
+
+    public enum DetectionMethod {
+        Stencil = 0,
+        CapsuleCast = 1
+    }
 	[HelpURL ("https://kronnect.freshdesk.com/support/solutions/42000065090")]
 	[ExecuteInEditMode]
 	public class HighlightSeeThroughOccluder : MonoBehaviour {
 
-		HighlightEffect effect;
+        public DetectionMethod detectionMethod = DetectionMethod.Stencil;
 
-		void Awake () {
-			effect = GetComponent<HighlightEffect> ();
-		}
+        [NonSerialized]
+        public MeshData[] meshData;
 
-		void Update () {
-			effect.RenderOccluder ();
-		}
-	}
+        List<Renderer> rr;
+
+        void OnEnable () {
+            if (gameObject.activeInHierarchy) {
+                Init();
+            }
+        }
+
+        void Init() {
+
+            if (detectionMethod == DetectionMethod.CapsuleCast) {
+                HighlightEffect.RegisterOccluder(this);
+                return;
+            }
+
+            if (rr == null) {
+                rr = new List<Renderer>();
+            } else {
+                rr.Clear();
+            }
+            GetComponentsInChildren<Renderer>(rr);
+            int rrCount = rr.Count;
+            meshData = new MeshData[rrCount];
+            for (int k = 0; k < rrCount; k++) {
+                meshData[k].renderer = rr[k];
+                meshData[k].subMeshCount = 1;
+                if (rr[k] is MeshRenderer) {
+                    MeshFilter mf = rr[k].GetComponent<MeshFilter>();
+                    if (mf != null && mf.sharedMesh != null) {
+                        meshData[k].subMeshCount = mf.sharedMesh.subMeshCount;
+                    }
+                } else if (rr[k] is SkinnedMeshRenderer) {
+                    SkinnedMeshRenderer smr = (SkinnedMeshRenderer)rr[k];
+                    meshData[k].subMeshCount = smr.sharedMesh.subMeshCount;
+                }
+            }
+            if (rrCount > 0) {
+                HighlightEffect.RegisterOccluder(this);
+            }
+        }
+
+        void OnDisable () {
+            HighlightEffect.UnregisterOccluder(this);
+        }
+    }
 
 }

@@ -40,7 +40,7 @@ public class CameraOrbit : MonoBehaviour
             {
                
                 _LocalRotation.x += Input.GetAxis("Mouse X") * MouseSensitivity;
-                _LocalRotation.y += Input.GetAxis("Mouse Y") * MouseSensitivity;
+                _LocalRotation.y -= Input.GetAxis("Mouse Y") * MouseSensitivity;
 
                 
             }

@@ -26,7 +26,12 @@ public class ChangeNameModel : MonoBehaviour
         {
 
             nameModelText.text = go.name;
+#if UNITY_STANDALONE
             nameModelText.text = nameModelText.text.Substring(0, nameModelText.text.Length - 7);
+#endif
+#if UNITY_ANDROID
+            nameModelText.text = nameModelText.text.Substring(0, nameModelText.text.Length - 14);
+#endif
             getPhyText();
         }
         else { nameModelText.text = ""; }

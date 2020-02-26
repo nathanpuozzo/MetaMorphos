@@ -37,7 +37,7 @@ RectTransform:
   - {fileID: 3427755746195710199}
   - {fileID: 4640834739740494838}
   m_Father: {fileID: 1578444479469792190}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 690157210800318518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 690157210800318518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -121,7 +121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4640834739740494838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 750563845838228772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -167,8 +167,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
@@ -204,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8114250380081146430
 Transform:
   m_ObjectHideFlags: 0
@@ -243,7 +241,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -251,6 +250,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -329,19 +329,21 @@ MonoBehaviour:
   outlineWidth: 0.45
   outlineQuality: 2
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
+  outlineIndependent: 0
   glow: 1
   glowWidth: 0.4
   glowQuality: 2
   glowDownsampling: 2
   glowHQColor: {r: 1, g: 0.89411765, b: 0, a: 1}
   glowDithering: 1
+  glowBlendMode: 0
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -360,7 +362,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -371,9 +373,18 @@ MonoBehaviour:
   targetFXTransitionDuration: 0.5
   targetFXStayDuration: 1.5
   seeThrough: 0
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderCheckInterval: 1
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
   rmsCount: 1
 --- !u!114 &1759406781658729650
 MonoBehaviour:
@@ -390,6 +401,7 @@ MonoBehaviour:
   triggerMode: 0
   raycastCamera: {fileID: 0}
   raycastSource: 0
+  maxDistance: 0
 --- !u!1 &1095020184376193099
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +467,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -546,6 +559,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -612,7 +626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1266265325993649366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -621,8 +635,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
@@ -691,7 +703,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2651739782320486130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -700,8 +712,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
@@ -733,7 +743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6259135819159570070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -770,7 +780,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4413837944604886821}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -779,8 +789,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
@@ -812,7 +820,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3427755746195710199
 RectTransform:
   m_ObjectHideFlags: 0
@@ -849,7 +857,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4786677748314767903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -858,8 +866,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
@@ -895,7 +901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4595400126241080243
 Transform:
   m_ObjectHideFlags: 0
@@ -942,6 +948,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1020,19 +1027,21 @@ MonoBehaviour:
   outlineWidth: 0.45
   outlineQuality: 2
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
+  outlineIndependent: 0
   glow: 1
   glowWidth: 0.4
   glowQuality: 2
   glowDownsampling: 2
   glowHQColor: {r: 1, g: 0.89411765, b: 0, a: 1}
   glowDithering: 1
+  glowBlendMode: 0
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -1051,7 +1060,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1062,9 +1071,18 @@ MonoBehaviour:
   targetFXTransitionDuration: 0.5
   targetFXStayDuration: 1.5
   seeThrough: 0
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderCheckInterval: 1
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
   rmsCount: 1
 --- !u!114 &8673995373207597038
 MonoBehaviour:
@@ -1081,6 +1099,7 @@ MonoBehaviour:
   triggerMode: 0
   raycastCamera: {fileID: 0}
   raycastSource: 0
+  maxDistance: 0
 --- !u!1 &5014694095981606526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1168,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1227,19 +1247,21 @@ MonoBehaviour:
   outlineWidth: 0.45
   outlineQuality: 2
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
+  outlineIndependent: 0
   glow: 1
   glowWidth: 0.4
   glowQuality: 2
   glowDownsampling: 2
   glowHQColor: {r: 1, g: 0.89411765, b: 0, a: 1}
   glowDithering: 1
+  glowBlendMode: 0
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -1258,7 +1280,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1269,9 +1291,18 @@ MonoBehaviour:
   targetFXTransitionDuration: 0.5
   targetFXStayDuration: 1.5
   seeThrough: 0
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderCheckInterval: 1
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
   rmsCount: 1
 --- !u!114 &7505841410458853784
 MonoBehaviour:
@@ -1288,6 +1319,7 @@ MonoBehaviour:
   triggerMode: 0
   raycastCamera: {fileID: 0}
   raycastSource: 0
+  maxDistance: 0
 --- !u!1 &5668998942013247858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1385,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1395,7 +1428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6365243842293097972}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.00077, y: 8.730362, z: 0.13862991}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1578444479469792190}
@@ -1433,6 +1466,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1511,19 +1545,21 @@ MonoBehaviour:
   outlineWidth: 0.45
   outlineQuality: 2
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
+  outlineIndependent: 0
   glow: 1
   glowWidth: 0.4
   glowQuality: 2
   glowDownsampling: 2
   glowHQColor: {r: 1, g: 0.89411765, b: 0, a: 1}
   glowDithering: 1
+  glowBlendMode: 0
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -1542,7 +1578,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1553,9 +1589,18 @@ MonoBehaviour:
   targetFXTransitionDuration: 0.5
   targetFXStayDuration: 1.5
   seeThrough: 0
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderCheckInterval: 1
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
   rmsCount: 1
 --- !u!114 &7952203341671482296
 MonoBehaviour:
@@ -1572,6 +1617,7 @@ MonoBehaviour:
   triggerMode: 0
   raycastCamera: {fileID: 0}
   raycastSource: 0
+  maxDistance: 0
 --- !u!1 &6388967096373719146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,7 +1639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5136684590807642095
 Transform:
   m_ObjectHideFlags: 0
@@ -1606,7 +1652,7 @@ Transform:
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1578444479469792190}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8609426027366715149
 MeshFilter:
@@ -1640,6 +1686,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1718,19 +1765,21 @@ MonoBehaviour:
   outlineWidth: 0.45
   outlineQuality: 2
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
+  outlineIndependent: 0
   glow: 1
   glowWidth: 0.4
   glowQuality: 2
   glowDownsampling: 2
   glowHQColor: {r: 1, g: 0.89411765, b: 0, a: 1}
   glowDithering: 1
+  glowBlendMode: 0
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -1749,7 +1798,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1760,9 +1809,18 @@ MonoBehaviour:
   targetFXTransitionDuration: 0.5
   targetFXStayDuration: 1.5
   seeThrough: 0
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderCheckInterval: 1
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
   rmsCount: 1
 --- !u!114 &7135399433703139771
 MonoBehaviour:
@@ -1779,6 +1837,7 @@ MonoBehaviour:
   triggerMode: 0
   raycastCamera: {fileID: 0}
   raycastSource: 0
+  maxDistance: 0
 --- !u!1 &6427236871142657001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1868,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6427236871142657001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.012871999, y: 10.94849, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1578444479469792190}
@@ -1847,6 +1906,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1925,19 +1985,21 @@ MonoBehaviour:
   outlineWidth: 0.45
   outlineQuality: 2
   outlineDownsampling: 2
-  outlineAlwaysOnTop: 0
+  outlineVisibility: 0
   outlineOptimalBlit: 1
   outlineBlitDebug: 0
+  outlineIndependent: 0
   glow: 1
   glowWidth: 0.4
   glowQuality: 2
   glowDownsampling: 2
   glowHQColor: {r: 1, g: 0.89411765, b: 0, a: 1}
   glowDithering: 1
+  glowBlendMode: 0
   glowMagicNumber1: 0.75
   glowMagicNumber2: 0.5
   glowAnimationSpeed: 1
-  glowAlwaysOnTop: 0
+  glowVisibility: 0
   glowOptimalBlit: 1
   glowBlitDebug: 0
   glowPasses:
@@ -1956,7 +2018,7 @@ MonoBehaviour:
   innerGlow: 0
   innerGlowWidth: 1
   innerGlowColor: {r: 1, g: 1, b: 1, a: 1}
-  innerGlowAlwaysOnTop: 0
+  innerGlowVisibility: 0
   targetFX: 0
   targetFXTexture: {fileID: 0}
   targetFXColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1967,9 +2029,18 @@ MonoBehaviour:
   targetFXTransitionDuration: 0.5
   targetFXStayDuration: 1.5
   seeThrough: 0
+  seeThroughOccluderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  seeThroughOccluderThreshold: 0.3
+  seeThroughOccluderCheckInterval: 1
   seeThroughIntensity: 0.8
   seeThroughTintAlpha: 0.5
   seeThroughTintColor: {r: 1, g: 0, b: 0, a: 1}
+  seeThroughNoise: 1
+  seeThroughBorder: 0
+  seeThroughBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  seeThroughBorderWidth: 0.45
   rmsCount: 1
 --- !u!114 &8697468112821279286
 MonoBehaviour:
@@ -1986,6 +2057,7 @@ MonoBehaviour:
   triggerMode: 0
   raycastCamera: {fileID: 0}
   raycastSource: 0
+  maxDistance: 0
 --- !u!1 &6633373751747294050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,6 +2095,7 @@ Transform:
   - {fileID: 1638526498716349220}
   - {fileID: 8114250380081146430}
   - {fileID: 4595400126241080243}
+  - {fileID: 4409347515670077606}
   - {fileID: 5136684590807642095}
   - {fileID: 5730713454121932348}
   m_Father: {fileID: 0}
@@ -2056,12 +2129,98 @@ MonoBehaviour:
     label: {fileID: 9051367885853591934}
   - gameObject: {fileID: 5014694095981606526}
     label: {fileID: 2651739782320486130}
-  - gameObject: {fileID: 814095970390899942}
-    label: {fileID: 4413837944604886821}
-  - gameObject: {fileID: 4799197553363065553}
-    label: {fileID: 4786677748314767903}
-  - gameObject: {fileID: 6388967096373719146}
-    label: {fileID: 750563845838228772}
+--- !u!1 &7455664093225195995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4409347515670077606}
+  - component: {fileID: 861656555821555898}
+  - component: {fileID: 1007556075306636136}
+  - component: {fileID: 1443112930755631159}
+  m_Layer: 0
+  m_Name: Pharynx_bloc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4409347515670077606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455664093225195995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children: []
+  m_Father: {fileID: 1578444479469792190}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &861656555821555898
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455664093225195995}
+  m_Mesh: {fileID: -5300544148564947261, guid: 76f8ada62cb09f94684ace967b773f1d, type: 3}
+--- !u!23 &1007556075306636136
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455664093225195995}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials: []
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!64 &1443112930755631159
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7455664093225195995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -5300544148564947261, guid: 76f8ada62cb09f94684ace967b773f1d, type: 3}
 --- !u!1 &9051367885853591934
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,7 +2275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9051367885853591934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2125,8 +2284,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
