@@ -31,7 +31,7 @@ public class ZoomInAndOut : MonoBehaviour
             cameraFollow.fieldOfView -= zoomChangeAmount * Time.deltaTime;
         }
 
-        cameraFollow.fieldOfView = Mathf.Clamp(cameraFollow.fieldOfView, 30, 60);
+        cameraFollow.fieldOfView = Mathf.Clamp(cameraFollow.fieldOfView, 20, 60);
 
     }
     // Start is called before the first frame update

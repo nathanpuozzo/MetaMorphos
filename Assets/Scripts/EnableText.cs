@@ -10,6 +10,8 @@ public class EnableText : MonoBehaviour
 {
 
     private Text text;
+    private GameObject imgGO;
+    private Image img;
     private GameObject textGO;
     Vector3 colliderPointion;
     RectTransform rectTransform;
@@ -30,6 +32,8 @@ public class EnableText : MonoBehaviour
     {
         camera = GameObject.Find("UICamera").GetComponent<Camera>();
         cloneLabel = GameObject.Find(gameObject.name);
+        imgGO = GameObject.Find("Image");
+        img = imgGO.GetComponent<Image>();
         text = cloneLabel.GetComponent<Text>();
         bilbo = cloneLabel.AddComponent<Button>();
         bilbo.onClick.AddListener(() => DisableTxt());
@@ -52,28 +56,22 @@ public class EnableText : MonoBehaviour
             }
         }
 
-        if (camera.fieldOfView < 50.0f)
+        if (camera.fieldOfView < 35.0f)
         {
             Debug.Log("I'm here");
             DisableTxt();
             clickCount = 0;
         }
     }
-    /*
+   
     private void OnMouseEnter()
     {
 
-        
         text.enabled = true;
-        lineCond = true;
-        if (GetComponent<LineRenderer>() != null)
-        {
-            if(lineCond == true) { line.enabled = true; }
-            
-            
-        }
+        img.enabled = true;
+        text.text = text.name;
     }
-    */
+    /*
     private void OnMouseDown()
     {
    
@@ -100,7 +98,7 @@ public class EnableText : MonoBehaviour
         
 
     }
-  
+  */
     private void DisableTxt()
     {
         Debug.Log("im'here");
@@ -113,20 +111,16 @@ public class EnableText : MonoBehaviour
 
         }
     }
-    /*
+
     private void OnMouseExit()
     {
         if (txtStay == false)
         {
             text.enabled = false;
-            lineCond = false;
-            if (GetComponent<LineRenderer>() != null)
-            {
-                if (lineCond == false) { line.enabled = false; }
-
-            }
+            img.enabled = false;
+            
         }
     }
-    */
+   
    
 }

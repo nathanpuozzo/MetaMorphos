@@ -114,7 +114,7 @@ namespace HighlightPlus {
 			}
 		}
 
-
+        /*
 		void OnMouseDown () {
             if (isActiveAndEnabled && triggerMode == TriggerMode.ColliderEventsOnlyOnThisObject)
             {
@@ -128,16 +128,16 @@ namespace HighlightPlus {
                 }
             }
 		}
-
+        */
         void Update()
         {
-            if (camera.fieldOfView < 50.0f)
+            if (camera.fieldOfView < 35.0f)
             {
                 Highlight(false);
                 clickCount = 0;
             }
         }
-        /*
+        
 		void OnMouseEnter () {
             if (isActiveAndEnabled && triggerMode == TriggerMode.ColliderEventsOnlyOnThisObject) {
 				Highlight (true);
@@ -149,7 +149,7 @@ namespace HighlightPlus {
 				Highlight (false);
 			}
 		}
-        */
+        
         void Highlight (bool state) {
 			HighlightEffect hb = transform.GetComponent<HighlightEffect> ();
 			if (hb == null && state) {
